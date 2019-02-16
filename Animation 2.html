@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<meta charset="utf-8" />
+</head>
+<body>
+<script>
+  var x = 210;
+  var y = 290;
+  var z = 0;
+  var e = 195;
+  var c = 0;
+  function setup() {
+    createCanvas(400, 400);
+  }
+
+  function draw() {
+    background(200);
+    noStroke();
+
+    // draw smokestack
+    fill(255);
+    rect(195, height, 30, -100);
+    rect(195, 100, 210, -30);
+
+    // darker as it gets closer to 0
+
+  rect(e, 75, 20, 20);
+    e -= 3;
+     if (e < -50) {
+      e = 195;
+     }
+
+
+
+    translate(x, y);
+    rotate(z);
+    rect(-10, -10, 20, 20);
+
+    // up 3 pixels
+    y -= 3;
+
+    // y = y - 3
+    // x += 3
+    // x = x + 3
+    // x = x + 1
+    // x++
+
+    // rotate 0.05 radians ~= 2.8 degrees per frame
+    z += 0.3
+
+    // if reach past the top a bunch
+    if (y < -300) {
+      y = 290;
+    }
+  }
+
+</script>
+</body>
+</html>
